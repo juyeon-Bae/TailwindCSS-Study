@@ -31,33 +31,33 @@ export default function Sticky() {
               <img
                 src="https://placehold.co/400x400.png?text=City"
                 alt="City Image"
-                className="w-full h-full rounded-lg shadow-md"
+                className="w-full h-full rounded-lg shadow-md "
               />
             ))}
           </div>
         </section>
 
+        {/* sticky : 화면 내 지정된 위치에 고정 시킴, 스크롤 내려도 원하는 위치에 고정됨*/}
         <aside class="w-2/5">
-          <div className="rounded border-2 px-6 py-4">
-            <h2 className="text-2xl font-bold">장바구니</h2>
-            <div className="my-2">
-              {data.map((item, index) => (
-                <div className="flex justify-between">
-                  <div>상품 {index + 1}</div>
-                  <p>{item.price}</p>
-                </div>
-              ))}
-            </div>
-            <div className="w-full bg-gray-500 h-[1px] my-2"></div>
-            <div className="flex justify-between font-bold mb-3">
-              <p>총합계</p>
-              <p>w 30,000</p>
+          <div class="sticky top-16 p-6 border-2 border-gray-800 rounded-lg">
+            <h2 class="text-xl font-bold mb-4">장바구니</h2>
+            <div class="space-y-2">
+              <div class="flex justify-between">
+                <span>상품 1</span>
+                <span>₩ 10,000</span>
+              </div>
+              <div class="flex justify-between">
+                <span>상품 2</span>
+                <span>₩ 20,000</span>
+              </div>
+              <div class="flex justify-between font-bold border-t pt-2">
+                <span>총합계</span>
+                <span>₩ 30,000</span>
+              </div>
             </div>
             <button
-              className="py-2 rounded w-full text-center
-             bg-green-600 text-white
-             cursor-pointer
-             "
+              class="mt-4 w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+              type="button"
             >
               결제하기
             </button>
