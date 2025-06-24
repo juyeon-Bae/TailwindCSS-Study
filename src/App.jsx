@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import TailwindBasic from './pages/Tailwind_Basic';
 import Layout from './pages/Layout';
+import Transition from './04_trasition-animation/transition';
 import Responsive from './pages/Responsive';
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<TailwindBasic />} /> */}
-          <Route path="/" element={<Layout />} />
+          {/* <Route path="/" element={<Layout />} /> */}
+          <Route path="/" element={<Transition />} />
           {/* <Route path="/" element={<Responsive />} /> */}
         </Routes>
       </BrowserRouter>
