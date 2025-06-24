@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import TailwindBasic from './pages/Tailwind_Basic';
 import Layout from './pages/Layout';
-import Transition from './04_trasition-animation/transition';
+import Transition from './pages/Transition';
 import Responsive from './pages/Responsive';
 function App() {
   return (
