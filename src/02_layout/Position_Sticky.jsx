@@ -24,9 +24,9 @@ export default function Sticky() {
           </ul>
         </nav>
       </header>
-      <main class="container max-w-5xl mx-auto px-4 pb-8 pt-24 flex gap-x-4">
-        <section class="w-3/5">
-          <div class="grid grid-cols-2 gap-4">
+      <main class="container max-w-5xl mx-auto px-4 pb-8 pt-24 flex gap-x-4 mb-[74px]">
+        <div className="w-full sm:w-3/5">
+          <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[0, 1, 2, 3, 4, 5].map((item) => (
               <img
                 src="https://placehold.co/400x400.png?text=City"
@@ -34,11 +34,11 @@ export default function Sticky() {
                 className="w-full h-full rounded-lg shadow-md "
               />
             ))}
-          </div>
-        </section>
+          </section>
+        </div>
 
         {/* sticky : 화면 내 지정된 위치에 고정 시킴, 스크롤 내려도 원하는 위치에 고정됨*/}
-        <aside class="w-2/5">
+        <aside class="w-2/6 hidden sm:block">
           <div class="sticky top-16 p-6 border-2 border-gray-800 rounded-lg">
             <h2 class="text-xl font-bold mb-4">장바구니</h2>
             <div class="space-y-2">
@@ -54,16 +54,19 @@ export default function Sticky() {
                 <span>총합계</span>
                 <span>₩ 30,000</span>
               </div>
+              <button class="mt-4 w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+                결제하기
+              </button>
             </div>
-            <button
-              class="mt-4 w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
-              type="button"
-            >
-              결제하기
-            </button>
           </div>
         </aside>
       </main>
+
+      <div className="sm:hidden bg-white  border-t-2 border-gray-800 p-4">
+        <button class="fixed bottom-0 left-0 right-0 w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+          결제하기
+        </button>
+      </div>
     </>
   );
 }

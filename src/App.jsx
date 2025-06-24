@@ -8,8 +8,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<TailwindBasic />} /> */}
-          {/* <Route path="/" element={<Layout />} /> */}
-          <Route path="/" element={<Responsive />} />
+          <Route path="/" element={<Layout />} />
+          {/* <Route path="/" element={<Responsive />} /> */}
         </Routes>
       </BrowserRouter>
     </>
